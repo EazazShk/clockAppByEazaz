@@ -92,6 +92,16 @@ function setStartTimer() {
             parseInt(document.getElementById("cdMinutes").value) || 0;
         let cdSeconds =
             parseInt(document.getElementById("cdSeconds").value) || 0;
+
+        if (cdHours < 0 || cdMinutes < 0 || cdSeconds < 0) {
+            alert("Please enter positive values for the countdown timer.");
+            return;
+        }
+
+        if (cdHours === 0 && cdMinutes === 0 && cdSeconds === 0) {
+            alert("Please enter a valid duration for the countdown timer.");
+            return;
+        }
         totalDuration = cdHours * 3600 + cdMinutes * 60 + cdSeconds;
         updateTimer();
         ctTime = setInterval(decrementTimer, 1000);
@@ -105,6 +115,9 @@ function decrementTimer() {
     } else {
         clearInterval(ctTime);
         alert("Countdown finished!");
+        cdHours = document.getElementById("cdHours").value = "";
+        cdMinutes = document.getElementById("cdMinutes").value = "";
+        cdSeconds = document.getElementById("cdSeconds").value = "";
         ctTime = null;
     }
 }
@@ -117,9 +130,9 @@ function setStopTimer() {
 function setResetTimer() {
     clearInterval(ctTime);
     ctTime = null;
-    cdHours = "";
-    cdMinutes = "";
-    cdSeconds = "";
+    cdHours = document.getElementById("cdHours").value = "";
+    cdMinutes = document.getElementById("cdMinutes").value = "";
+    cdSeconds = document.getElementById("cdSeconds").value = "";
     totalDuration = 0;
 
     updateTimer();
@@ -139,8 +152,10 @@ function updateTimer() {
 
     document.getElementById("ctTime").textContent = formattedTime;
 }
+
+// Alarm Clock
 function setAlarm() {
-    const alarmTime = document.getElementById("alarm-clock").value;
+    let alarmTime = document.getElementById("alarm-clock").value;
     if (!alarmTime) {
         alert("Please set a valid alarm time.");
         return;
@@ -157,6 +172,7 @@ function setAlarm() {
     let timeDifference = alarmDate - now;
 
     setTimeout(function () {
-        alert("Alarm!");
+        alert("Alarm! Wake Up");
+        alarmTime = document.getElementById("alarm-clock").value = "";
     }, timeDifference);
 }
