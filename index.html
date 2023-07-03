@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Clock</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <center>
+            <h1>Alarm Clock</h1>
+            <label for="alarm-clock"> Set time :</label>
+            <input type="time" id="alarm-clock" />
+            <button onclick="setAlarm()">Set Aram</button>
+        </center>
+        <hr />
+        <div class="wClk">
+            <h1>World Clock</h1>
+            <div id="world-clock"></div>
+        </div>
+        <div class="lClk">
+            <h2>Local Clock</h2>
+            <div id="clock"></div>
+        </div>
+        <hr />
+        <center>
+            <h2>Stop Watch</h2>
+            <div id="stopwatch">00:00:00</div>
+            <div>
+                <button class="start" onclick="startTimer()">
+                    Start StopWatch
+                </button>
+                <button class="stop" onclick="stopTimer()">
+                    Stop StopWatch
+                </button>
+                <button class="reset" onclick="resetTimer()">
+                    Reset StopWatch
+                </button>
+            </div>
+            <hr />
+            <h3>Countdown Timer</h3>
+            <div class="ctTimer">
+                <div id="ctTime">00:00:00</div>
+                <input type="number" id="cdHours" placeholder="Hours" />
+                <input type="number" id="cdMinutes" placeholder="Minutes" />
+                <input type="number" id="cdSeconds" placeholder="Seconds" />
+                <br />
+                <button onclick="setStartTimer()">Start</button>
+                <button onclick="setStopTimer()">Stop</button>
+                <button onclick="setResetTimer()">Reset</button>
+            </div>
+        </center>
+    </body>
+    <script src="script.js"></script>
+</html>

@@ -1,0 +1,72 @@
+* {
+    font-size: 30px;
+    font-family: Arial;
+}
+body {
+    background-color: #be62eb;
+}
+#clock {
+    font-size: 35px;
+}
+#stopwatch,
+#world-clock {
+    font-size: 35px;
+}
+.start,
+.stop,
+.reset {
+    font-size: 25px;
+}
+
+.ctTimer {
+    margin-top: 10px;
+}
+button {
+    font-size: 25px;
+    margin: 5px;
+}
+#ctTime {
+    font-size: 40px;
+}
+.wClk {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    vertical-align: top;
+    margin-left: 20%;
+}
+h1,
+h2,
+h3 {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 35px;
+}
+.lClk {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    vertical-align: top;
+    margin-left: 20%;
+}
+#cdHours,
+#cdMinutes,
+#cdSeconds {
+    font-size: 24px;
+    width: 160px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+button {
+    border-radius: 10px;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+button :hover {
+    opacity: 0.8;
+}
+button:active {
+    opacity: 0.4;
+}
