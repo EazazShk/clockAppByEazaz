@@ -1,22 +1,74 @@
 <html>
     <head>
+        <h1>Eazaz Shaikh</h1>
         <title>Clock</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <center>
             <h1>Alarm Clock</h1>
-            <label for="alarm-clock"> Set time :</label>
+            <label for="alarm-clock"> Set time :-</label>
             <input type="time" id="alarm-clock" />
             <button onclick="setAlarm()">Set Alarm</button>
-           
-        <hr />
-        <div class="wClk">
+
+            <hr />
             <h1>World Clock</h1>
-            <div id="world-clock"></div>
+        <label for="country-select">World Clock : - </label>
+
+        <select id="country-select">
+            <option value="">Select a country</option>
+            <option value="new-york">New York</option>
+            <option value="london">London</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="sydney">Sydney</option>
+            <option value="dubai">Dubai</option>
+            <option value="paris">Paris</option>
+            <option value="beijing">Beijing</option>
+            <option value="berlin">Berlin</option>
+        </select>
+
+        <div class="clock" id="new-york">
+            <label>New York</label>
+            <div class="time"></div>
         </div>
+
+        <div class="clock" id="london">
+            <label>London</label>
+            <div class="time"></div>
+        </div>
+
+        <div class="clock" id="tokyo">
+            <label>Tokyo</label>
+            <div class="time"></div>
+        </div>
+
+        <div class="clock" id="sydney">
+            <label>Sydney</label>
+            <div class="time"></div>
+        </div>
+
+        <div class="clock" id="dubai">
+            <label>Dubai</label>
+            <div class="time"></div>
+        </div>
+
+        <div class="clock" id="paris">
+            <label>Paris</label>
+            <div class="time"></div>
+        </div>
+
+        <div class="clock" id="beijing">
+            <label>Beijing</label>
+            <div class="time"></div>
+        </div>
+
+        <div class="clock" id="berlin">
+            <label>Berlin</label>
+            <div class="time"></div>
+        </div>
+        <hr>
         <div class="lClk">
-            <h2>Local Clock</h2>
+            <h2>Local Clock - India</h2>
             <div id="clock"></div>
         </div>
         <hr />
