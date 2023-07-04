@@ -1,53 +1,21 @@
 // Global Clock
-function updateTime(clockId, timeZone) {
-    const clock = document.getElementById(clockId);
-    const timeElement = clock.querySelector(".time");
-    const now = new Date().toLocaleString("en-US", {
-        timeZone: timeZone,
-    });
-    timeElement.textContent = now;
+function updateTime() {
+    const select = document.getElementById("country-select");
+    const selectedCountry = select.value;
+
+    if (!selectedCountry) {
+        return;
+    }
+
+    const options = { timeZone: selectedCountry, hour12: true };
+    const currentTime = new Date().toLocaleTimeString("en-US", options);
+
+    const timeElement = document.getElementById("current-time");
+    timeElement.textContent = currentTime;
 }
 
-const countrySelect = document.getElementById("country-select");
-countrySelect.addEventListener("change", function () {
-    const selectedCountry = countrySelect.value;
-    const clocks = document.getElementsByClassName("clock");
-    for (let i = 0; i < clocks.length; i++) {
-        clocks[i].style.display = "none";
-    }
-    if (selectedCountry !== "") {
-        const selectedClock = document.getElementById(selectedCountry);
-        selectedClock.style.display = "block";
-        const timeZone = getTimeZone(selectedCountry);
-        updateTime(selectedCountry, timeZone);
-        setInterval(function () {
-            updateTime(selectedCountry, timeZone);
-        }, 1000);
-    }
-});
-
-function getTimeZone(clockId) {
-    switch (clockId) {
-        case "new-york":
-            return "America/New_York";
-        case "london":
-            return "Europe/London";
-        case "tokyo":
-            return "Asia/Tokyo";
-        case "sydney":
-            return "Australia/Sydney";
-        case "dubai":
-            return "Asia/Dubai";
-        case "paris":
-            return "Europe/Paris";
-        case "beijing":
-            return "Asia/Shanghai";
-        case "berlin":
-            return "Europe/Berlin";
-        default:
-            return "";
-    }
-}
+// Refresh time every second
+setInterval(updateTime, 1000);
 
 // Local Watch
 setInterval(displayTime, 1000);
