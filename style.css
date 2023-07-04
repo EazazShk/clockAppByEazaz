@@ -9,7 +9,7 @@ h1,
 h2,
 h3 {
     color: #333;
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 h1 {
@@ -17,11 +17,11 @@ h1 {
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 label {
@@ -158,23 +158,6 @@ button:hover {
         font-size: 14px;
     }
 
-    input[type="time"],
-    input[type="number"] {
-        font-size: 12px;
-    }
-
-    .clock {
-        padding: 5px;
-    }
-
-    .clock label {
-        font-size: 12px;
-    }
-
-    .clock .time {
-        font-size: 20px;
-    }
-
     #clock,
     #stopwatch,
     #ctTime {
@@ -192,4 +175,26 @@ button:hover {
     #cdSeconds {
         width: 30px;
     }
+}
+
+.clock-container {
+    max-width: 400px;
+    margin: 0 auto;
+
+    padding: 20px;
+    border-radius: 5px;
+}
+.clock {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.clock label {
+    width: 80px;
+}
+
+.clock span {
+    font-size: 18px;
+    font-weight: bold;
 }
