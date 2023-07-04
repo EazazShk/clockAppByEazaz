@@ -1,72 +1,195 @@
-* {
-    font-size: 30px;
-    font-family: Arial;
-}
 body {
-    background-color: #be62eb;
-}
-#clock {
-    font-size: 35px;
-}
-#stopwatch,
-#world-clock {
-    font-size: 35px;
-}
-.start,
-.stop,
-.reset {
-    font-size: 25px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
 }
 
-.ctTimer {
-    margin-top: 10px;
-}
-button {
-    font-size: 25px;
-    margin: 5px;
-}
-#ctTime {
-    font-size: 40px;
-}
-.wClk {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    vertical-align: top;
-    margin-left: 0%;
-}
 h1,
 h2,
 h3 {
-    text-align: center;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 35px;
+    color: #333;
+    margin-top: 30px;
 }
-.lClk {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    vertical-align: top;
-    margin-left: 20%;
-}
-#cdHours,
-#cdMinutes,
-#cdSeconds {
+
+h1 {
     font-size: 24px;
-    width: 160px;
-    text-align: center;
-    background-color: antiquewhite;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+label {
+    display: block;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+input[type="time"],
+input[type="number"] {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
 }
 
 button {
-    border-radius: 10px;
-    background-color: antiquewhite;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
     cursor: pointer;
 }
 
-button :hover {
-    opacity: 0.8;
+button:hover {
+    background-color: #45a049;
 }
-button:active {
-    opacity: 0.4;
+
+.clock {
+    display: inline-block;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.clock label {
+    color: #555;
+    font-size: 14px;
+}
+
+.clock .time {
+    font-size: 20px;
+    color: #333;
+}
+
+.lClk {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+#clock {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#stopwatch,
+#ctTime {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.start,
+.stop,
+.reset {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.stop,
+.reset {
+    background-color: #f44336;
+}
+
+.start:hover,
+.stop:hover,
+.reset:hover {
+    background-color: #0c87e8;
+}
+
+.ctTimer {
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#cdHours,
+#cdMinutes,
+#cdSeconds {
+    width: 50px;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .clock {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input[type="time"],
+    input[type="number"] {
+        font-size: 12px;
+    }
+
+    .clock {
+        padding: 5px;
+    }
+
+    .clock label {
+        font-size: 12px;
+    }
+
+    .clock .time {
+        font-size: 20px;
+    }
+
+    #clock,
+    #stopwatch,
+    #ctTime {
+        font-size: 24px;
+    }
+
+    .start,
+    .stop,
+    .reset {
+        font-size: 12px;
+    }
+
+    #cdHours,
+    #cdMinutes,
+    #cdSeconds {
+        width: 30px;
+    }
 }
